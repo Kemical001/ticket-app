@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.cyan,
-            title: const Text("Welcome to flutter"),
+            title: const Text("Flutter Title"),
           ),
-          body: const Center(child: Text("Hello Flutter")),
+          body: const Center(child: Text("New flutter project")),
         ));
   }
 }
