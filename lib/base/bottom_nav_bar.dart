@@ -12,16 +12,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.greenAccent,
-        title: const Text("Welcome to ipoint"),
+        backgroundColor: Colors.cyan,
+        title: const Text("My Tickets"),
       ),
       body: const Center(
-        child: Text("New flutter project"),
+        child: Text("Ticket info"),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: const Color(0xFF526400),
+        showSelectedLabels: false,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search")
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.airplane_ticket), label: "Tickets"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
         ],
       ),
     );
