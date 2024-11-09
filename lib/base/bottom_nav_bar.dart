@@ -9,6 +9,13 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  final appscreen = [
+    const Text("Home"),
+    const Text("Search"),
+    const Text("Tickets"),
+    const Text("Profile")
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
