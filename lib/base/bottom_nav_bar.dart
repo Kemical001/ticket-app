@@ -18,6 +18,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
       body: Center(
         child: Text("Tickets Info"),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black87,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.airplane_ticket), label: "Tickets"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
+        ],
+      ),
     );
   }
 }
