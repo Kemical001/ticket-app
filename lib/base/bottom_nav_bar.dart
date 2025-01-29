@@ -1,3 +1,4 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -8,24 +9,50 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  final appScreens = [
+    const Center(child: (Text("Home"))),
+    const Center(child: (Text("Search"))),
+    const Center(child: (Text("Tickets"))),
+    const Center(child: (Text("Profile")))
+  ];
+
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("My Ticket"),
-        backgroundColor: Colors.deepPurpleAccent,
       ),
-      body: Center(
-        child: Text("Tickets Info"),
-      ),
+      body: appScreens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.black87,
+        onTap: _onItemTapped,
+        selectedItemColor: Color(0xFF526400),
+        unselectedItemColor: Color(0xFF526400),
+        showSelectedLabels: false,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.airplane_ticket), label: "Tickets"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
+              icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
+              activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+              label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
+              activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+              label: "Search"),
+          BottomNavigationBarItem(
+              icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+              activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+              label: "Tickets"),
+          BottomNavigationBarItem(
+              icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
+              activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+              label: "Profile")
         ],
       ),
     );
