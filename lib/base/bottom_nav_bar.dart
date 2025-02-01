@@ -29,14 +29,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Ticket"),
+        title: Text("Fly Connect"),
       ),
       body: appScreens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        selectedItemColor: Color(0xFF526400),
-        unselectedItemColor: Color(0xFF526400),
+        selectedItemColor: Colors.black87,
+        unselectedItemColor: Colors.black87,
         showSelectedLabels: false,
         items: [
           BottomNavigationBarItem(

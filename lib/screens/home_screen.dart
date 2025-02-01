@@ -23,8 +23,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           "Good morning",
-                          style: TextStyle(
-                              fontSize: 17, fontWeight: FontWeight.w500),
+                          style: AppStyles.headLineStyle3,
                         ),
                         SizedBox(
                           height: 5,
@@ -36,9 +35,12 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      color: Color(0xFF526400),
                       height: 50,
                       width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/logo.png"))),
                     )
                   ],
                 ),
