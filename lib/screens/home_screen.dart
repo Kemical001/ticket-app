@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //Columb //Row
     return Scaffold(
-      backgroundColor: Color(0xFFeeedf2),
+      backgroundColor: AppStyles.bgColor,
       //I want a scrollable effect
       body: ListView(
         children: [
