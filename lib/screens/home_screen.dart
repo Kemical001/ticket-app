@@ -1,4 +1,6 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,9 +10,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //Columb //Row
     return Scaffold(
+      backgroundColor: Color(0xFFeeedf2),
       //I want a scrollable effect
       body: ListView(
         children: [
+          SizedBox(
+            height: 40,
+          ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -40,13 +46,29 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/logo.png"))),
+                              image: AssetImage(AppMedia.logo))),
                     )
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text("Search Icon"), Text("Empty Space")],
+                SizedBox(
+                  height: 25,
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFFF4F6FD),
+                  ),
+                  child: Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        FluentSystemIcons.ic_fluent_search_regular,
+                        color: Color(0xFFbfc205),
+                      ),
+                      Text("Search"),
+                    ],
+                  ),
                 )
               ],
             ),
